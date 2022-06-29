@@ -15,8 +15,8 @@ type Comparable interface {
 }
 
 type LinkedList[T Comparable] struct {
-	val  T
-	next *LinkedList[T]
+	Val  T
+	Next *LinkedList[T]
 }
 
 func MakeLinkedList[T Comparable](vals ...T) *LinkedList[T] {
@@ -24,21 +24,19 @@ func MakeLinkedList[T Comparable](vals ...T) *LinkedList[T] {
 	node := head
 
 	for _, val := range vals {
-		node.next = &LinkedList[T]{val: val, next: nil}
-		node = node.next
+		node.Next = &LinkedList[T]{Val: val, Next: nil}
+		node = node.Next
 	}
 
 	return head
 }
 
-/*
 func Traverse[T Comparable](head *LinkedList[T], k T) *LinkedList[T] {
-	for node := head.next; node != nil; node = node.next {
-		if node != nil && node.val == k {
+	for node := head.Next; node != nil; node = node.Next {
+		if node != nil && node.Val == k {
 			return node
 		}
 	}
 
 	return nil
 }
-*/
