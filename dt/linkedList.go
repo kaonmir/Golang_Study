@@ -37,6 +37,17 @@ func Traverse[T Comparable](head *LinkedList[T], k T) *LinkedList[T] {
 			return node
 		}
 	}
-
 	return nil
+}
+
+func At[T Comparable](head *LinkedList[T], idx int) *LinkedList[T] {
+	node := head
+	for i := 0; i <= idx; i++ {
+		node = node.Next
+	}
+	return node
+}
+
+func Insert[T Comparable](head *LinkedList[T], k T, idx int) {
+
 }

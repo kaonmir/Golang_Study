@@ -22,5 +22,4 @@ func main() {
 	fmt.Println("Starting print1...")
 	fmt.Println(add(1, 2))
 	fmt.Println(add(3.34, 1.64))
-
 }

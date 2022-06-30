@@ -43,3 +43,15 @@ func TestTraverse(t *testing.T) {
 		t.Error("The value of the wrong value is not nil")
 	}
 }
+
+func TestAt(t *testing.T) {
+	head := dt.MakeLinkedList(1, 2, 10, 11)
+
+	// TestCase 1: The value of index 1 is 2
+	if dt.At(head, 1).Val != 2 {
+		t.Error("The value of index 1 is not 2")
+	}
+
+	// TestCase 2: The value of index 5 doesn't exist
+	// TODO: I do not know how to implement this
+}
